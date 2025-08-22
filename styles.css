@@ -1,8 +1,8 @@
 /* General Page Style */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #5B21B6; 
+  font-family: "Tiny5", sans-serif;
+  background-color: #4C1D95; 
   color: white;
   display: flex;
   justify-content: center;
@@ -15,8 +15,8 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 700px;
-  background-color: #5B21B6;
+  width: 1000px;
+  background-color: #4C1D95;
   padding: 20px;
 }
 
@@ -35,7 +35,7 @@ body {
 .display {
   background: black;
   color: #ff4c65; /* red number */
-  font-family: "Courier New", monospace;
+  font-family: "Tiny5", sans-serif;
   font-size: 80px;
   padding: 20px 40px;
   border-radius: 8px;
@@ -63,5 +63,5 @@ button {
 
 button:hover {
   background: #b0c4de;
-  color: #5B21B6;
+  color: #4C1D95;
 }
