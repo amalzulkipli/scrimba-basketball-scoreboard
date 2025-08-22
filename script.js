@@ -33,3 +33,9 @@ guestButtons.forEach(button => {
     updateDisplay();
   });
 });
+
+function resetScores() {
+            homeScore = 0;
+            guestScore = 0;
+            updateDisplay()
+        }

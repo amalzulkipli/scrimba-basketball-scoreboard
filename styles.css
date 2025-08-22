@@ -10,6 +10,15 @@ body {
   height: 100vh;
 }
 
+/* Scoreboard title */
+#scoreboard-title {
+  text-align: center;
+  font-size: 48px;
+  font-family: "Tiny5", sans-serif;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+}
+
 /* Scoreboard container */
 .scoreboard {
   display: flex;
@@ -38,7 +47,7 @@ body {
   font-family: "Tiny5", sans-serif;
   font-size: 80px;
   padding: 20px 40px;
-  border-radius: 8px;
+  border-radius: 0px;
   margin-bottom: 15px;
 }
 
@@ -46,6 +55,7 @@ body {
 .buttons {
   display: flex;
   justify-content: center;
+  font-family: "Tiny5", sans-serif;
   gap: 10px;
 }
 
@@ -56,7 +66,7 @@ button {
   color: #b0c4de;
   font-size: 20px;
   padding: 10px 15px;
-  border-radius: 8px;
+  border-radius: 0px;
   cursor: pointer;
   transition: 0.2s;
 }
