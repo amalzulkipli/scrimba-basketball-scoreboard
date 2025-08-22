@@ -1,47 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scoreboard</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Basketball Scoreboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="scoreboard">
+    <div class="container">
+        <h1 class="scoreboard-title">Scoreboard</h1>
+        
+        <div class="scoreboard">
+            <div class="team">
+                <h2>HOME</h2>
+                <div class="display" id="home-score">0</div>
+                <div class="buttons">
+                    <button onclick="changeScore('home', 1)">+1</button>
+                    <button onclick="changeScore('home', 2)">+2</button>
+                    <button onclick="changeScore('home', 3)">+3</button>
+                </div>
+            </div>
 
-    <h1 id="#scoreboard-title">Scoreboard</h1>
-    
-    <!-- HOME SIDE -->
-    <div class="team">
-      <h2>HOME</h2>
-      <div class="display">0</div>
-      <div class="buttons">
-        <button>+1</button>
-        <button>+2</button>
-        <button>+3</button>
-      </div>
+            <div class="team">
+                <h2>GUEST</h2>
+                <div class="display" id="guest-score">0</div>
+                <div class="buttons">
+                    <button onclick="changeScore('guest', 1)">+1</button>
+                    <button onclick="changeScore('guest', 2)">+2</button>
+                    <button onclick="changeScore('guest', 3)">+3</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="new-game">
+            <button onclick="resetScores()" class="new-game-btn">New Game</button>
+        </div>
     </div>
 
-    <!-- GUEST SIDE -->
-    <div class="team">
-      <h2>GUEST</h2>
-      <div class="display">0</div>
-      <div class="buttons">
-        <button>+1</button>
-        <button>+2</button>
-        <button>+3</button>
-      </div>
-    </div>
-  </div>
+    <script>
+        let homeScore = 0;
+        let guestScore = 0;
 
-  <!-- Add New Game Button -->
-  <div class="new-game">">
-      <button id="new-game-btn" onclick="resetScores()">New Game</button>
-  </div>
+        function changeScore(team, points) {
+            if (team === 'home') {
+                homeScore += points;
+                document.getElementById('home-score').textContent = homeScore;
+            } else {
+                guestScore += points;
+                document.getElementById('guest-score').textContent = guestScore;
+            }
+        }
 
-  <script src="script.js"></script>
+        function resetScores() {
+            homeScore = 0;
+            guestScore = 0;
+            document.getElementById('home-score').textContent = '0';
+            document.getElementById('guest-score').textContent = '0';
+        }
+    </script>
 </body>
 </html>

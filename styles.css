@@ -10,8 +10,14 @@ body {
   height: 100vh;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* Scoreboard title */
-#scoreboard-title {
+.scoreboard-title {
   text-align: center;
   font-size: 48px;
   font-family: "Tiny5", sans-serif;
@@ -22,11 +28,12 @@ body {
 /* Scoreboard container */
 .scoreboard {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  width: 1000px;
+  width: 600px;
   background-color: #4C1D95;
   padding: 20px;
+  gap: 50px;
 }
 
 /* Team section */
@@ -43,19 +50,20 @@ body {
 /* Score display */
 .display {
   background: black;
-  color: #ff4c65; /* red number */
+  color: #ff4c65;
   font-family: "Tiny5", sans-serif;
   font-size: 80px;
   padding: 20px 40px;
-  border-radius: 0px;
+  border-radius: 5px;
   margin-bottom: 15px;
+  text-align: center;
+  width: 150px;
 }
 
 /* Buttons container */
 .buttons {
   display: flex;
   justify-content: center;
-  font-family: "Tiny5", sans-serif;
   gap: 10px;
 }
 
@@ -66,12 +74,23 @@ button {
   color: #b0c4de;
   font-size: 20px;
   padding: 10px 15px;
-  border-radius: 0px;
+  border-radius: 5px;
   cursor: pointer;
   transition: 0.2s;
+  font-family: "Tiny5", sans-serif;
 }
 
 button:hover {
   background: #b0c4de;
   color: #4C1D95;
+}
+
+/* New Game button */
+.new-game {
+  margin-top: 30px;
+}
+
+.new-game-btn {
+  font-size: 24px;
+  padding: 15px 30px;
 }
